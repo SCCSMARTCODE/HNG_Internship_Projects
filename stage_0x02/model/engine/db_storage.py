@@ -16,7 +16,6 @@ logging.basicConfig()
 logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
 
-
 class DBStorage(object):
     __engine = None
     __session = None
