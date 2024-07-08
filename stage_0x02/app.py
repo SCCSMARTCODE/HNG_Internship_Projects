@@ -4,11 +4,11 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
 import datetime
 import uuid
+from __init__ import app
 from model.user_model import UserModel
 from model.organisation_model import OrganisationModel
 from model.user_to_organisation_model import UserToOrganisationModel
 from functions import token_required
-from __init__ import app
 
 from model.engine import session
 
