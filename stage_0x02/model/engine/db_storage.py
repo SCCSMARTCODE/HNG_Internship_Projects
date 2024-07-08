@@ -15,7 +15,6 @@ import os
 logging.basicConfig()
 logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
-ca_cert_pat = os.path.join(os.getcwd(), 'ca.pem')
 
 
 class DBStorage(object):
@@ -31,10 +30,6 @@ class DBStorage(object):
                 os.getenv('HNG_STAGE2_USER_DB_PORT'),
                 os.getenv('HNG_STAGE2_USER_DB_NAME')
             ),
-            connect_args={
-                'sslmode': 'require',
-                'sslrootcert': ca_cert_pat
-            },
             pool_recycle=3600,
             echo=True,
             echo_pool=True,
