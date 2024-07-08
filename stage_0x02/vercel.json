@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "app.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/auth/register", "dest": "app.py" },
+    { "src": "/auth/login", "dest": "app.py" },
+    { "src": "/api/users/(.*)", "dest": "app.py" },
+    { "src": "/api/organisations", "dest": "app.py" },
+    { "src": "/api/organisations/(.*)", "dest": "app.py" },
+    { "src": "/api/organisations/(.*)/users", "dest": "app.py" }
+  ],
+  "env": {
+    "SECRET_KEY": "<your_secret_key>"
+  }
+}

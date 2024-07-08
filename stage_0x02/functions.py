@@ -5,7 +5,7 @@ from model.engine import session
 from model.user_model import UserModel
 from functools import wraps
 from flask import request, jsonify
-from web_dynamic import app
+import app
 import jwt
 session = session()
 

@@ -3,7 +3,7 @@ import unittest
 import json
 import jwt
 import datetime
-from web_dynamic.app import app
+import app
 from model.engine import session
 from model.user_model import UserModel
 from model.organisation_model import OrganisationModel

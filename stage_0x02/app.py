@@ -7,8 +7,7 @@ import uuid
 from model.user_model import UserModel
 from model.organisation_model import OrganisationModel
 from model.user_to_organisation_model import UserToOrganisationModel
-from web_dynamic import app
-from web_dynamic.functions import token_required
+from functions import token_required
 
 from model.engine import session
 
